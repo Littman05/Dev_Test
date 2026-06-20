@@ -1,0 +1,18 @@
+{
+  "name": "shopcart",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix Backend\" \"npm run dev --prefix Frontend\"",
+    "dev:backend": "npm run dev --prefix Backend",
+    "dev:frontend": "npm run dev --prefix Frontend",
+    "install:all": "npm install --prefix Backend && npm install --prefix Frontend",
+    "seed": "npm run seed --prefix Backend",
+    "seed:reset": "npm run seed:reset --prefix Backend",
+    "seed:full": "npm run seed:full --prefix Backend",
+    "build": "npm run build --prefix Frontend",
+    "verify": "npm run seed:full --prefix Backend && npm run build --prefix Frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
